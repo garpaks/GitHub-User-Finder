@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub User Finder</title>
+</head>
+<body>
+    <div id="contenedorPrincipal">
+<header id="encabezado">
+    <div id="titulo">
+        <div id="logoyTitulo">
+            <img id="logoGitHubTitulo" src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="githublogo">
+            <h1>GitHub User Finder</h1>
+        </div>
+        <p id="descripcionUno">
+            Busca información detallada de cualquier usuario de GitHub
+        </p>
+    </div>
+</header>
+    <main>
+        <div id="buscador">
+            <div class="arribaBuscador">
+                <div id="tituloyLupa">
+                    <img class="lupa1" src="https://img.icons8.com/ios-filled/50/000000/search.png" alt="lupa">
+                    <h1>Buscar Usuario</h1>
+                </div>
+                <p id="indicacionBuscar">Introduce el nombre de usuario de GitHub para obtener su información</p>
+            </div>
+            <div id="abajoBuscador">
+                <input id="barraBuscador" type="text" placeholder="Ej. garpaks">
+                <button id="botonBusqueda">
+                <img id ="lupa2" src="https://img.icons8.com/ios-filled/50/ffffff/search.png " alt="lupa">                    <p id="buscar">Buscar</p>
+                <span id="spinner"></span>
+                </button>
+            </div>
+        </div>
+        <div id="noEncontrado">
+            <p> ❗Usuario no encontrado, por favor intente de nuevo. 😊 </p>
+        </div>
+        <div id="perfilUsuario">
+        <div id="contenedorTarjeta">  
+            <div id="avatarCont">
+                <img id="avatar" src="" alt="avatar">
+            </div>
+            <div id="datosDeUsuarioCont">
+                <div id="tarjetaIdentidadCont">
+                <h1 id="nombreDeUsuario"></h1>
+                <p class="loginUsuario"></p>
+                <p id="bioUsuario"></p>
+                <p id="ubicacionUsuario"></p>
+                <p id="fechaDeCreacion"></p>
+                </div>
+            </div>
+            </div>
+            <div id="contenedorEGeneral">
+                <h2>Estadísticas </h2>
+                <div id="estadisticasCont">
+                <div id="repositoriosCont">
+                    <div id="imagenRepoCot">
+                    <img id="imagenRepo" src="https://img.icons8.com/ios/100/merge-git.png" alt="">
+                    <h3 id="repositorioText">Repositorios</h3>
+                    </div>
+                    <p class="repositorios"></p>
+                </div>
+                <div id="seguidoresCont">
+                    <div id="seguidoresImgCont">
+                    <img id="imagenSegui" src="https://img.icons8.com/ios/100/share_2.png" alt="">
+                    <h3 id="seguidoresText">Seguidores</h3>
+                    </div>
+                    <p class="seguidores"></p>
+                </div>
+                <div id="siguiendoCont">
+                    <div id="siguiImgCont">
+                    <img id="imagenSigui" src="https://img.icons8.com/ios/100/share_2.png" alt="">
+                    <h3 id="siguiendoText">Siguiendo</h3>
+                    </div>
+                    <p class="siguiendo"></p>
+                </div>
+            </div>
+        </div>
+            <div id="informacionDetalladaCont">
+                <h2>Información Detallada</h2>
+                <div id="datosCont">
+
+                <div id="contNombreCompleto">
+                <p>Nombre completo:</p>
+                <div id="itemNombre">
+                <p id="nombreCompletoUsuario"></p>
+                </div>
+                </div>
+
+                <div id="contNombreUsuario">
+                <p>Nombre de usuario:</p>
+                <div id="itemUsuario">
+                <span class="loginUsuario dato" id="loginUsuarioSolo"></span>
+                </div>
+                </div>
+                <div id="contRepositorios">
+                <p>Repositorios públicos:</p>
+                <div id="itemRepositorios">
+                <p class="repositorios dato"></p>
+            </div>
+                </div>
+                <div id="contSeguidores">
+                <p>Seguidores:</p>
+                <div id="itemSeguidores">
+                <p class="seguidores dato"></p>
+                </div>
+                </div>
+                <div id="contSiguiendo">
+                <p>Siguendo:</p>
+                <div id="itemSiguiendo">
+                <p class="siguiendo dato" ></p>
+                </div>
+                </div>
+                </div>
+            </div>
+    <div id="linksCont">
+    <a id="enlaceUsuario" target="_blank" href="https://github.com/tu-perfil" style="text-decoration:none;">
+    <div id="gitHubCont" style="display: flex; align-items: center; gap: 10px; cursor: pointer; background: #222; padding: 10px; border-radius: 6px; color: white;">
+      <img id="logoGitHub" src="https://img.icons8.com/ios-glyphs/30/github.png" alt="github" />
+
+      <p id="enlaceLetras" style="margin: 0;">Ver Perfil en GitHub</p>
+
+      <img id="externalLogo1" src="https://img.icons8.com/ios-glyphs/30/external-link.png" alt="external-link"/>
+    </div>
+  </a>
+  <a  id="enlaceWebsite" target="_blank" href="" >
+    <div id="webCont">
+        <img id="logoWeb" src="https://img.icons8.com/ios/50/globe--v1.png" alt="website">
+        <p id="enlaceWebLetras">Sitio Web</p>
+         <img id="externalLogo2" src="https://img.icons8.com/ios-glyphs/30/external-link.png" alt="external-link" />
+    </div>
+  </a>
+</div>
+</div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

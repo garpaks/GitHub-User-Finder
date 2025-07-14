@@ -1,0 +1,535 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: "Open Sans", sans-serif;
+  }
+
+  #contenedorPrincipal {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 6rem;
+  }
+
+  #encabezado {
+    font-size: 1.3em;
+  }
+
+  #titulo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 1em;
+    gap: 1em;
+  }
+
+  #logoyTitulo {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+  }
+
+  #logoGitHubTitulo {
+    width: 2em;
+  }
+
+  #descripcionUno {
+    opacity: 0.5;
+  }
+
+  .lupa1{
+    width: 2em;
+  }
+
+  #buscador{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 2rem;
+    width: auto;
+    border-radius: 1em;
+    gap: 1em;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  #abajoBuscador {
+    display: flex;
+    gap: 1em;
+    align-items: center;
+    height: 2.8em
+
+  }
+
+  #indicacionBuscar{
+    opacity: 0.5;
+  }
+
+  #tituloyLupa{
+    display: flex;
+    align-items: center;
+    gap: 0.2em;
+    padding-bottom: 0.4em;
+  }
+
+  #barraBuscador {
+    width: 100%;
+    height: 100%;
+    border: 1px solid rgba(102, 100, 100, 0.2);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    border-radius: 8px;
+    padding: 1em;
+    transition: border-color 0.3s ease;
+  }
+
+  #spinner {
+  animation: rotate 2s infinite;
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  display: none;
+}
+
+  #spinner:before,
+  #spinner:after {
+  border-radius: 50%;
+  content: "";
+  height: 20px;
+  width: 20px;
+  display: block;
+}
+  #spinner:before {
+  animation: ball1 2s infinite;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 30px 0 0 #ffffff;
+  margin-bottom: 10px;
+}
+  #spinner:after {
+  animation: ball2 2s infinite;
+  background-color: #ffffff;
+  box-shadow: 30px 0 0 rgb(255 255 255 / 16%);
+}
+
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg) scale(0.8);
+  }
+  50% {
+    transform: rotate(360deg) scale(1.2);
+  }
+  100% {
+    transform: rotate(720deg) scale(0.8);
+  }
+}
+
+@keyframes ball1 {
+  0% {
+    box-shadow: 30px 0 0 #ffffff;
+  }
+  50% {
+    box-shadow: 0 0 0 #ffffff;
+    margin-bottom: 0;
+    transform: translate(15px, 15px);
+  }
+  100% {
+    box-shadow: 30px 0 0 #ffffff;
+    margin-bottom: 10px;
+  }
+}
+
+@keyframes ball2 {
+  0% {
+    box-shadow: 30px 0 0 rgb(255, 255, 255);
+  }
+  50% {
+    box-shadow: 0 0 0 rgb(255, 255, 255);
+    margin-top: -20px;
+    transform: translate(15px, 15px);
+  }
+  100% {
+    box-shadow: 30px 0 0 rgb(255, 255, 255);
+    margin-top: 0;
+  }
+}
+
+
+
+  #barraBuscador:focus {
+    outline: none;
+    border: 1px solid black;
+  }
+  #botonBusqueda {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5em;
+    text-align: center;
+    height: 100%;
+    background-color: rgb(139, 139, 139);
+    color: aliceblue;
+    border-radius: 8px;
+    padding: 1em;
+    border: none;
+    position: relative;
+    transition: 0.5s;
+  }
+
+  #botonBusqueda:hover {
+    background-color: rgb(255, 0, 0);
+    transition: 0.3s;
+  }
+
+  #botonBusqueda:enabled {
+    background-color: black;
+    cursor: pointer;
+    color: aliceblue;
+  }
+
+  #abajoBuscador {
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    width: auto;
+  }
+  #buscar {
+    font-size: 1.5em;
+  }
+  #lupa2 {
+    width: 2em;
+  }
+
+  #perfilUsuario {
+    display: none;
+    box-shadow: 0px 1px 1px 1px rgba(0, 0, 0, 0.08);
+    border-radius: 8px;
+  }
+
+  #noEncontrado {
+    padding: 1em;
+    color: red;
+    border-radius: 8px;
+    border: solid red;
+    margin: 1em 0 0 0;
+    display: none;
+  }
+
+  #contenedorTarjeta {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    text-align: justify;
+    padding: 1em;
+    margin: 1em 0 0 0;
+  }
+
+  #tarjetaIdentidadCont {
+    text-align: start;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    
+  }
+
+  #avatar {
+    width: 9em;
+    border-radius: 8px ;
+  }
+
+  #contenedorEGeneral{
+    padding: 1em;
+    border-top: 1px solid  rgba(0, 0, 0, 0.1);
+  }
+
+  #estadisticasCont {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    text-align: center;
+    padding: 2em;
+    gap: 1em;
+  }
+
+  #repositoriosCont {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    box-shadow: 4px 4px 10px 0px rgb(144, 192, 255)
+    ;
+    border-radius: 8px;
+    padding: 1em;
+  }
+
+  #imagenRepoCot{
+    display: flex;
+    gap: 0.5em;
+
+  }
+
+  #imagenRepo{
+    width: 1.5em;
+    filter: brightness(0) saturate(100%) invert(25%) sepia(100%) saturate(1000%) hue-rotate(210deg);
+  }
+
+  .repositorios{
+    color:rgb(37, 99, 235);
+    font-weight: bold;
+
+  }
+
+  #repositorioText{
+    color: rgb(30, 64, 175);
+  }
+
+  #seguidoresCont{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    box-shadow: 4px 4px 10px 0px rgb(142, 235, 170);
+    border-radius: 8px;
+    padding: 1em;
+  }
+
+  #seguidoresImgCont{
+    display: flex;
+    gap: 1em;
+  }
+
+  #imagenSegui{
+    width: 1.5em;
+    filter: brightness(0) saturate(100%) invert(33%) sepia(53%) saturate(588%) hue-rotate(95deg) brightness(92%) contrast(85%);
+  }
+
+  #seguidoresText {
+    color: rgb(22, 101, 52) ;
+    font-weight: bold;
+  }
+  
+  .seguidores {
+    color: rgb(22, 163, 74);
+    font-weight: bold;
+  }
+
+  #siguiendoCont{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    box-shadow: 4px 4px 10px 0px rgb(210, 165, 255);
+    border-radius: 8px;
+    padding: 1em;
+  }
+
+  #siguiImgCont{
+    display: flex;
+    gap: 1em;
+  }
+
+  #imagenSigui{
+    width: 1.5em;
+    filter: brightness(0) saturate(100%) invert(27%) sepia(69%) saturate(1879%) hue-rotate(254deg) brightness(90%) contrast(93%);
+  }
+
+  #siguiendoText{
+    color: rgb(107, 33, 168);
+    font-weight: bold;
+  }
+  
+  .siguiendo{
+    color: rgb(174, 51, 234);
+    font-weight: bold;
+  }
+
+  #informacionDetalladaCont {
+    padding: 1em;
+    border-top: 1px solid  rgba(0, 0, 0, 0.1);
+  }
+
+
+  #datosCont{
+    padding: 1em 0 0 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+  }
+
+
+  #nombreCompletoUsuario{
+    opacity: 0.6;
+  }
+
+  #contNombreCompleto {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  
+  #contNombreUsuario{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  #itemUsuario{
+    background-color: rgb(235, 232, 232);
+    border-radius: 8px ;
+        padding: 0.3em;
+  }
+
+  #contRepositorios {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  #itemRepositorios{
+    border-radius: 8px;
+    box-shadow: 1px 1px 1px 0px rgba(0, 0, 0, 0.8);
+    padding: 0.3em;
+  }
+
+  #contSeguidores{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  #itemSeguidores {
+    border-radius: 8px;
+    box-shadow: 1px 1px 1px 0px  rgba(0, 0, 0, 0.8);
+    padding: 0.3em;
+  }
+
+  #contSiguiendo {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  #itemSiguiendo {
+    border-radius: 8px;
+    box-shadow: 1px 1px 1px 0px rgba(0, 0, 0, 0.8);
+    padding: 0.3em;
+  }
+
+  #linksCont {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 1em;
+    align-items: center;
+    border-top: 1px solid  rgba(0, 0, 0, 0.1);
+    
+  }
+
+
+  #gitHubCont {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    background-color: rgb(46, 46, 46);
+    width:100%;
+    border-radius: 8px;
+    padding: 1em;
+  }
+
+  #gitHubCont:hover{
+   background-color: rgb(117, 117, 117);
+    cursor: pointer;
+  }
+
+  #enlaceLetras {
+    color: aliceblue;
+    text-align: center;
+  }
+
+  #logoGitHub {
+    width: 24px;
+    filter: invert(1);
+  }
+
+  #externalLogo1 {
+    width: 19px;
+    height: 19px;
+    filter: invert(1);
+  }
+
+  #externalLogo2{
+    width: 19px;
+    height: 19px;
+  }
+
+  #enlaceWebsite{
+    border: solid #000000;
+    border-radius: 8px;
+    text-decoration: none;
+    color: black;
+  }
+
+  #webCont {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    width:100%;
+    border-radius: 8px;
+    padding: 0.5em;
+  }
+
+  #logoWeb{
+   width: 24px;
+  }
+
+
+@media (max-width: 682px) {
+
+  #logoyTitulo {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  h1{
+    text-align: center;
+  }
+
+  #contenedorPrincipal {
+    padding: 2rem;
+  }
+
+  #contenedorTarjeta{
+    flex-direction: column;
+  }
+
+  #tarjetaIdentidadCont{
+    font-size: 1em;
+    text-align: center;
+  }
+
+  #descripcionUno {
+    font-size: 0.8em;
+    text-align: center;
+  }
+
+  #logoyTitulo {
+    font-size: 0.9em;
+  }
+
+  #tituloyLupa {
+    font-size: 0.8em;
+  }
+
+  #indicacionBuscar{
+    font-size: 0.8em;
+    text-align: center;
+  }
+
+  #lupa1 {
+    width: 1em;
+  }
+
+  #estadisticasCont{
+    grid-template-columns: 1fr;
+  }
+
+  #linksCont{
+    flex-direction: column;
+    gap: 1em;
+  }
+}
+
+@media (max-width: 338px) {
+  
+}
