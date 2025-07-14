@@ -34,3 +34,13 @@ El enfoque técnico fue simple y directo:
 ![Diseño Responsivo](./img/Captura%204.png)
 
 
+### 🖥️ Pasos de Instalación
+Paso 1: Buscamos "Releases" y damos clic en "Version 1.0"
+![captura](./img/Captura%205.png)
+Paso 2: Damos clic en "GitHub User Finder.zip" para descagar el sitio web.
+![captura](./img/Captura%206.png)
+Paso 3: Nos vamos a "Descargas" en el explorador de archivos, le damos clic derecho a la carpeta descargada y lo descomprimimos. 
+![captura](./img/Captura%207.png)
+![captura](./img/Captura%208.png)
+Paso 4: Ya dentro de la carpeta hacemos clic en "index" y ya tenemos abierto el sitio web. ¡Listo para usarse!
+![captura](./img/Captura%201.png)
