@@ -13,11 +13,11 @@ El enfoque técnico fue simple y directo:
 - **JavaScript (Vanilla)**:
   - Uso de `fetch()` para obtener datos desde `https://api.github.com/users/{usuario}`
   - Manejo de errores para cuando un usuario no existe y aviso de que se intente ingresar de nuevo.
-  - Animación de Spinner al momento de buscar el usuario en la barra de buscqueda.
-  - Interacción con el DOM para mostrar los datos obtenidos
+  - Animación de "Spinner" al momento de buscar el usuario en la barra de busqueda.
+  - Interacción con el DOM para mostrar los datos obtenidos.
   - If else cuando el perfil tiene blog se muestra el link y cuando no, se oculta en el display.
-  - Diseño Responsivo. 
-  - El boton de buscar funciona también al presionar "enter".
+  - Diseño responsivo. 
+  - El boton de "buscar" funciona también al presionar "enter".
 
 ---
 
